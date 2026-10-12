@@ -1,0 +1,3 @@
+# Only the pandas analysis/report examples need this direct dependency.
+# pandas installs its own runtime dependencies; generation/validation use stdlib.
+pandas==3.0.6

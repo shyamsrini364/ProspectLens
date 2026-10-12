@@ -1,0 +1,71 @@
+/* Layout and components inherit colours/type/spacing from the design tokens. */
+.stApp {background:var(--pl-backdrop);color:var(--pl-foreground);font-family:var(--pl-font-ui)}
+[data-testid="stHeader"] {background:transparent}
+.stMainBlockContainer {max-width:1440px;padding:48px 48px 64px}
+h1,h2,h3,h4 {font-family:var(--pl-font-display)!important;letter-spacing:-.025em;font-weight:500!important}
+h1 {font-size:32px!important} h2 {font-size:22px!important} h3 {font-size:18px!important}
+.pl-brand {display:flex;align-items:center;gap:12px;font:500 22px var(--pl-font-display);margin:0 0 24px}
+.pl-logo {display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--pl-primary);color:var(--pl-primary-contrast)}
+.pl-brand small {font:400 13px var(--pl-font-ui);margin-left:auto;color:var(--pl-text-muted)}
+.pl-eyebrow {color:var(--pl-text-muted);font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;margin:0}
+.pl-hero {padding:24px 32px;background:var(--pl-card-glass);border:1px solid var(--pl-border);border-radius:var(--pl-radius-hero);margin:8px 0 16px}
+.pl-hero h1 {margin:8px 0;padding:0}.pl-hero p {margin:0;color:var(--pl-text-muted)}
+.pl-hero p + p {margin-top:var(--pl-space-4)}
+.pl-demo {display:inline-block;font-size:12px;padding:6px 12px;margin-bottom:12px;border-radius:var(--pl-radius-pill);background:var(--pl-mist);color:var(--pl-foreground);font-weight:600}
+.st-key-navigation [data-testid="stHorizontalBlock"] {justify-content:flex-start}
+.st-key-navigation button {border-radius:var(--pl-radius-pill);min-height:44px}
+[data-testid="stBaseButton-primary"] {color:var(--pl-primary-contrast)!important;background:var(--pl-primary)!important}
+.st-key-quality, [class*="st-key-chart_"]:not(.st-key-chart_pair) {background:var(--pl-surface);border:1px solid var(--pl-border);border-radius:var(--pl-radius-card);padding:24px;box-shadow:var(--pl-shadow)}
+.st-key-filters {padding:8px 0 16px}
+.st-key-menu_actions {display:none}
+.pl-menu-action {display:block;width:100%;border:0;border-radius:4px;background:transparent;color:inherit;text-align:left;font:inherit;font-size:14px;padding:8px 12px;cursor:pointer}
+.pl-menu-action:hover,.pl-menu-action:focus-visible {background:var(--pl-mist);color:var(--pl-foreground)}
+.pl-menu-action:disabled {opacity:.45;cursor:default}
+.st-key-kpis {gap:16px!important}
+[data-testid="stMetric"] {background:var(--pl-card-glass);border:1px solid var(--pl-border);border-radius:var(--pl-radius-card);padding:20px;min-height:180px;box-shadow:var(--pl-shadow)}
+[data-testid="stMetricLabel"] {color:var(--pl-text-muted)}
+[data-testid="stMetricValue"] {font-family:var(--pl-font-display);font-variant-numeric:tabular-nums}
+[data-testid="stMetricDelta"] {color:var(--pl-text-muted);white-space:normal;font-size:12px}
+[data-testid="stMetricLabel"] *, [data-testid="stMetricDelta"] * {white-space:normal!important;overflow:visible!important;text-overflow:clip!important}
+/* Colour supplements the existing metric titles, values and explanatory help. */
+.st-key-kpis [data-testid="stMetricValue"] {color:var(--pl-kpi-neutral)}
+.st-key-kpis [data-testid="stColumn"]:nth-child(3) [data-testid="stMetricValue"] {color:var(--pl-kpi-impact)}
+.st-key-kpis [data-testid="stColumn"]:nth-child(4) [data-testid="stMetricValue"] {color:var(--pl-kpi-ai)}
+.st-key-kpis [data-testid="stColumn"]:nth-child(5) [data-testid="stMetricValue"] {color:var(--pl-kpi-followup)}
+.st-key-kpis [data-testid="stMetricDelta"], .st-key-kpis [data-testid="stMetricDelta"] * {color:var(--pl-kpi-detail)!important;font-size:13px!important;line-height:1.35}
+.st-key-heatmap_scroll {overflow-x:auto;max-width:100%}
+.st-key-ai_heatmap_scroll {overflow-x:auto;max-width:100%}
+.st-key-outcome_columns_scroll {overflow-x:auto;max-width:100%}
+.st-key-outcome_columns_scroll > [data-testid="stElementContainer"] {min-width:760px}
+/* Streamlit measures the element's parent when sizing Plotly, not the SVG. */
+.st-key-ai_heatmap_scroll > [data-testid="stElementContainer"] {min-width:640px}
+.pl-ai-legend {display:flex;flex-wrap:wrap;gap:12px 24px;font-size:13px;color:var(--pl-foreground)}
+.pl-ai-legend span {display:inline-flex;align-items:center;gap:8px}
+.pl-ai-legend i {display:inline-block;width:12px;height:12px;border-radius:2px}
+.pl-survey-insight {background:var(--pl-survey-insight);color:var(--pl-foreground);border-left:3px solid var(--pl-primary);border-radius:12px;padding:12px 16px;font-size:13px;line-height:1.5}
+.pl-survey-insight strong {font-weight:600}
+.st-key-chart_pair :is(.st-key-chart_pain,.st-key-chart_size) {border-color:var(--pl-survey-border)}
+.pl-survey-insight p {margin:4px 0 0}
+.st-key-opp_matrix_scroll {overflow-x:auto;max-width:100%}
+.st-key-opp_matrix_scroll > [data-testid="stElementContainer"] {min-width:620px}
+.st-key-opp_kpis [data-testid="stMetricValue"] {color:var(--pl-kpi-neutral)}
+.st-key-opp_kpis [data-testid="stColumn"]:nth-child(2) [data-testid="stMetricValue"] {color:var(--pl-kpi-impact)}
+.st-key-opp_kpis [data-testid="stColumn"]:nth-child(3) [data-testid="stMetricValue"] {color:var(--pl-kpi-ai)}
+.st-key-opp_kpis [data-testid="stColumn"]:nth-child(4) [data-testid="stMetricValue"] {color:var(--pl-kpi-followup)}
+.st-key-opp_kpis [data-testid="stColumn"]:nth-child(5) [data-testid="stMetricValue"] {color:var(--pl-kpi-ai)}
+.st-key-opp_kpis [data-testid="stMetricDelta"],.st-key-opp_kpis [data-testid="stMetricDelta"] * {color:var(--pl-kpi-detail)!important;font-size:13px!important;line-height:1.35}
+[data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] p {color:var(--pl-text-muted)!important;opacity:1}
+:is(button,a,input,select,textarea,[tabindex]):focus-visible {outline:2px solid var(--pl-focus)!important;outline-offset:3px}
+@media(max-width:1100px) {.stMainBlockContainer{padding:48px 24px}.st-key-kpis [data-testid="stColumn"]{min-width:180px}}
+@media(max-width:800px) {
+ .st-key-opp_kpis [data-testid="stColumn"] {min-width:180px}
+ .st-key-opp_filters [data-testid="stColumn"] {min-width:100%}
+ .stMainBlockContainer{padding:48px 16px 32px}
+ [data-testid="stHorizontalBlock"]{flex-wrap:wrap}
+ .st-key-filters [data-testid="stColumn"], .st-key-chart_pair [data-testid="stColumn"]{min-width:100%}
+ .st-key-ai_donuts [data-testid="stColumn"]{min-width:100%}
+ .pl-hero{padding:24px}h1{font-size:27px!important}
+ [class*="st-key-chart_"]:not(.st-key-chart_pair),.st-key-quality{padding:16px}
+ .pl-brand small{display:none}
+}
+@media(prefers-reduced-motion:reduce) {.stApp,.stApp *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

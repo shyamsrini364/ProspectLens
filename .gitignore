@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.coverage
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+.codex/
+.agents/
+data/
+**/contacts_and_consent*.csv
+!templates/contacts_and_consent_template.csv

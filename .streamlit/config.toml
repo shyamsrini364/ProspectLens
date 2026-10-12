@@ -1,0 +1,28 @@
+[server]
+headless = true
+address = "127.0.0.1"
+
+[browser]
+gatherUsageStats = false
+
+# Native controls and tables use the same anchors as tokens.css.
+# Main menu > Light / Dark switches all components together; light is default.
+[theme]
+base = "light"
+font = "Inter, sans-serif"
+headingFont = "Lexend, sans-serif"
+baseRadius = "15px"
+buttonRadius = "15px"
+showWidgetBorder = true
+
+[theme.light]
+primaryColor = "#6476B7"
+backgroundColor = "#F1F2FC"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#2B3555"
+
+[theme.dark]
+primaryColor = "#A4B8F7"
+backgroundColor = "#171D35"
+secondaryBackgroundColor = "#252B46"
+textColor = "#F4F1FF"

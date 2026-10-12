@@ -1,0 +1,13 @@
+organisation:
+  display_name: "Example Consulting Organisation"
+  report_title: "Business Opportunity Intelligence Brief"
+  currency: "AUD"
+analysis:
+  high_impact_threshold: 4
+  minimum_group_size_warning: 5
+  complexity_simple_max: 2
+  complexity_medium_max: 3
+privacy:
+  notice_version: "REPLACE_BEFORE_REAL_COLLECTION"
+  contact_email: "REPLACE_BEFORE_REAL_COLLECTION"
+  hosting_and_processing_details: "REPLACE_BEFORE_REAL_COLLECTION"

@@ -1,0 +1,143 @@
+/* ProspectLens — semantic tokens v1.0. Apply data-theme on an ancestor. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600&display=swap');
+:root,[data-theme="light"]{
+  color-scheme:light;
+  --pl-canvas:#F1F2FC;
+  --pl-mist:#C7D4F8;
+  --pl-surface:#FFFFFF;
+  --pl-foreground:#2B3555;
+  --pl-primary:#6476B7;
+  --pl-orchid:#C0AEED;
+  --pl-text-muted:#616D8A;
+  --pl-border:rgba(76,90,135,.16);
+  --pl-card-glass:rgba(255,255,255,.88);
+  --pl-nav-glass:rgba(255,255,255,.79);
+  --pl-focus:#5266B2;
+  --pl-primary-contrast:#FFFFFF;
+  --pl-success:#25755C;
+  --pl-warning:#93651F;
+  --pl-danger:#AC4265;
+  --pl-info:#5266B2;
+  /* Opportunity matrix: qualify commercial evidence, pursue discovery,
+     clarify value, and lower current priority respectively. */
+  --pl-quadrant-value:rgba(100,118,183,.12);
+  --pl-quadrant-promising:rgba(47,150,156,.12);
+  --pl-quadrant-commercial:rgba(202,146,63,.13);
+  --pl-quadrant-low:rgba(125,134,167,.07);
+  --pl-kpi-neutral:#2B3555;
+  --pl-kpi-impact:#8A611E;
+  --pl-kpi-ai:#5266B2;
+  --pl-kpi-followup:#25755C;
+  --pl-kpi-detail:#52607A;
+  --pl-chart-1:#6476B7;
+  --pl-chart-2:#9479CB;
+  --pl-chart-3:#81A5CF;
+  --pl-survey-bar:#8296D5;
+  /* Unified leading-value accent: deep berry on Celestial Pearl. */
+  --pl-survey-highlight:#A12B83;
+  --pl-survey-iris:#A12B83;
+  --pl-survey-border:var(--pl-border);
+  --pl-survey-track:#E9ECF8;
+  --pl-survey-secondary:#7D86A7;
+  --pl-survey-insight:#F2F1FC;
+  --pl-ai-regular:#6476B7;
+  --pl-ai-specific:#A779D0;
+  --pl-ai-experimented:#2F969C;
+  --pl-ai-not-using:#AC7887;
+  --pl-ai-unsure:#CA923F;
+  --pl-heat-low:#FFFFFF;
+  --pl-heat-mid:#E3EAFB;
+  --pl-heat-high:#C7D4F8;
+  /* Deep Periwinkle: pain-point percentages, shared with the colour bar. */
+  --pl-pain-heat-0:#F1F2FC;
+  --pl-pain-heat-25:#C7D4F8;
+  --pl-pain-heat-50:#8499DC;
+  --pl-pain-heat-75:#6476B7;
+  --pl-pain-heat-100:#354879;
+  --pl-chart-ink:#10182D;
+  --pl-chart-paper:#FFFFFF;
+  --pl-shadow:0 15px 50px rgba(54,67,116,.10);
+  --pl-backdrop:radial-gradient(ellipse at 8% 0%,rgba(199,212,248,.80),transparent 56%),radial-gradient(ellipse at 90% 85%,rgba(192,174,237,.18),transparent 48%),#F1F2FC;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --pl-canvas:#171D35;
+  --pl-mist:#333A5D;
+  --pl-surface:#252B46;
+  --pl-foreground:#F4F1FF;
+  --pl-primary:#A4B8F7;
+  --pl-orchid:#C6A9EB;
+  --pl-text-muted:#C0C7E0;
+  --pl-border:rgba(220,225,255,.15);
+  --pl-card-glass:rgba(37,43,70,.91);
+  --pl-nav-glass:rgba(43,50,81,.89);
+  --pl-focus:#C6A9EB;
+  --pl-primary-contrast:#171D35;
+  --pl-success:#8BE0BE;
+  --pl-warning:#F2CA83;
+  --pl-danger:#FAA2B6;
+  --pl-info:#ABC6FF;
+  --pl-quadrant-value:rgba(100,150,235,.18);
+  --pl-quadrant-promising:rgba(71,198,178,.16);
+  --pl-quadrant-commercial:rgba(213,167,110,.16);
+  --pl-quadrant-low:rgba(182,190,216,.06);
+  --pl-kpi-neutral:#F5F6F8;
+  --pl-kpi-impact:#E2BA78;
+  --pl-kpi-ai:#A4B8F7;
+  --pl-kpi-followup:#83C7B5;
+  --pl-kpi-detail:#D4DBED;
+  --pl-chart-1:#A4B8F7;
+  --pl-chart-2:#C6A9EB;
+  --pl-chart-3:#86C1DB;
+  --pl-survey-bar:#A4B8F7;
+  /* Unified leading-value accent: Luminous Apricot on Pearl Nocturne. */
+  --pl-survey-highlight:#FFD08A;
+  --pl-survey-iris:#FFD08A;
+  --pl-survey-border:#394463;
+  --pl-survey-track:#38415F;
+  --pl-survey-secondary:#B6BED8;
+  --pl-survey-insight:#333A5D;
+  /* Shared AI-adoption category colours for charts and legends. */
+  --pl-ai-regular:#A4B8F7;
+  --pl-ai-specific:#C6A9EB;
+  --pl-ai-experimented:#65C5C4;
+  --pl-ai-not-using:#D19BAA;
+  --pl-ai-unsure:#D5A76E;
+  /* All heatmap cells remain visible against the dark card surface. */
+  --pl-heat-low:#425780;
+  --pl-heat-mid:#588BCC;
+  --pl-heat-high:#BDE5F4;
+  --pl-pain-heat-0:#F1F2FC;
+  --pl-pain-heat-25:#C7D4F8;
+  --pl-pain-heat-50:#8499DC;
+  --pl-pain-heat-75:#6476B7;
+  --pl-pain-heat-100:#354879;
+  --pl-chart-ink:#10182D;
+  --pl-chart-paper:#FFFFFF;
+  --pl-shadow:0 16px 60px rgba(7,10,29,.25);
+  --pl-backdrop:radial-gradient(ellipse at 8% 0%,rgba(71,80,132,.55),transparent 58%),radial-gradient(ellipse at 95% 78%,rgba(105,75,140,.18),transparent 48%),#171D35;
+}
+:root{
+  --pl-font-display:'Lexend','Inter',system-ui,sans-serif;
+  --pl-font-ui:'Inter',system-ui,sans-serif;
+  --pl-radius-hero:28px;
+  --pl-radius-card:22px;
+  --pl-radius-control:15px;
+  --pl-radius-pill:999px;
+  --pl-space-1:4px;--pl-space-2:8px;--pl-space-3:12px;--pl-space-4:16px;
+  --pl-space-6:24px;--pl-space-8:32px;--pl-space-12:48px;--pl-space-16:64px;
+  --pl-motion:200ms ease;
+}
+.pl-app{background:var(--pl-backdrop);color:var(--pl-foreground);font-family:var(--pl-font-ui);min-height:100vh;transition:background var(--pl-motion),color var(--pl-motion)}
+.pl-app h1,.pl-app h2,.pl-app h3,.pl-app h4{font-family:var(--pl-font-display);font-weight:500;letter-spacing:-.025em}
+.pl-card{background:var(--pl-card-glass);border:1px solid var(--pl-border);border-radius:var(--pl-radius-card);box-shadow:var(--pl-shadow);padding:var(--pl-space-6)}
+.pl-hero{border-radius:var(--pl-radius-hero)}
+.pl-glass{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.pl-button{border-radius:var(--pl-radius-control);background:var(--pl-primary);color:var(--pl-primary-contrast);font:600 14px var(--pl-font-ui);padding:12px 16px;border:0;cursor:pointer}
+.pl-button:hover{filter:brightness(.95)}
+.pl-app :is(button,a,input,select,textarea):focus-visible{outline:2px solid var(--pl-focus);outline-offset:3px}
+.pl-metric{font-variant-numeric:tabular-nums}
+.pl-lens{position:relative;isolation:isolate;overflow:hidden}
+.pl-lens:before{content:"";pointer-events:none;position:absolute;z-index:-1;inset:-75px -20px auto auto;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,var(--pl-orchid),transparent 67%);opacity:.18}
+.pl-lens:after{content:"";pointer-events:none;position:absolute;inset:-120px -70px auto auto;width:260px;height:260px;border:1px solid var(--pl-orchid);border-radius:50%;opacity:.13}
+@media(prefers-reduced-motion:reduce){.pl-app,.pl-app *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
